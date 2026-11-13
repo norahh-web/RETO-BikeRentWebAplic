@@ -5,7 +5,18 @@
             Consulta nuestro catálogo, elige la bicicleta que más te guste y reserva
             en unos minutos. Recógela en nuestra tienda en la fecha y hora que elijas.
         </p>
-        
+
+        <!-- Bloque de botones añadido en la cabecera -->
+        <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+            <a href="#catalogo" class="rounded bg-gray-800 px-5 py-2 text-white hover:bg-gray-700">
+                Ver catálogo
+            </a>
+            @auth
+                <a href="{{ route('bookings.index') }}" class="rounded bg-green-700 px-5 py-2 text-white hover:bg-green-600">
+                    Mis reservas
+                </a>
+            @endauth
+        </div>
     </section>
 
     <section class="bg-white rounded-lg shadow p-8 mb-10">
@@ -61,3 +72,4 @@
         </div>
     @endif
 </x-public-layout>
+
