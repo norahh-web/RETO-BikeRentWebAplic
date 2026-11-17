@@ -6,33 +6,33 @@
     <title>{{ config('app.name', 'BikeRentWeb') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans antialiased bg-gray-100 text-gray-900">
-    <nav class="bg-white border-b border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="{{ route('bikes.index') }}" class="text-lg font-semibold">🚲 BikeRentWeb</a>
+<body class="">
+    <nav class="">
+        <div class="">
+            <a href="{{ route('bikes.index') }}" class="">🚲 BikeRentWeb</a>
 
-            <div class="flex items-center gap-4 text-sm">
+            <div class="">
                 @auth
-                    <a href="{{ route('profile.edit') }}" class="text-gray-600 hover:underline">{{ Auth::user()->name }}</a>
-                    <a href="{{ route('dashboard') }}" class="hover:underline">Panel</a>
+                    <a href="{{ route('profile.edit') }}" class="">{{ Auth::user()->name }}</a>
+                    <a href="{{ route('dashboard') }}" class="">Panel</a>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="hover:underline">Cerrar sesión</button>
+                        <button type="submit" class="">Cerrar sesión</button>
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="hover:underline">Iniciar sesión</a>
-                    <a href="{{ route('register') }}" class="hover:underline">Registrarse</a>
+                    <a href="{{ route('login') }}" class="">Iniciar sesión</a>
+                    <a href="{{ route('register') }}" class="">Registrarse</a>
                 @endauth
             </div>
         </div>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="">
         @if (session('success'))
-            <div class="mb-6 rounded bg-green-100 text-green-800 px-4 py-3">{{ session('success') }}</div>
+            <div class="">{{ session('success') }}</div>
         @endif
         @if (session('error'))
-            <div class="mb-6 rounded bg-red-100 text-red-800 px-4 py-3">{{ session('error') }}</div>
+            <div class="">{{ session('error') }}</div>
         @endif
 
         {{ $slot }}
