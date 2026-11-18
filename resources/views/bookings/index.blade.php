@@ -11,7 +11,7 @@
                     <div class="">
                         <h2 class="">{{ $booking->bike->model }}</h2>
                         <p>
-                            <span class="">Desde:</span> {{ $booking->start_time->format('d/m/Y H:i') }}
+                            <span class="">DesdeA:</span> {{ $booking->start_time->format('d/m/Y H:i') }}
                             <span class="">Hasta:</span> {{ $booking->end_time->format('d/m/Y H:i') }}
                         </p>
                         <p>
